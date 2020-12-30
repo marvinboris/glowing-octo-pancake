@@ -1,9 +1,9 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[23],{
 
-/***/ "./resources/js/src/containers/Backend/Admin/EventTypes/Actions/Add.js":
-/*!*****************************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/Admin/EventTypes/Actions/Add.js ***!
-  \*****************************************************************************/
+/***/ "./resources/js/src/containers/Backend/Admin/Companies/Actions/Add.js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/src/containers/Backend/Admin/Companies/Actions/Add.js ***!
+  \****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -132,7 +132,7 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     onSubmit: function onSubmit(data) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_7__["postEventTypes"](data));
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_7__["postCompanies"](data));
     }
   };
 };
@@ -141,10 +141,10 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
-/***/ "./resources/js/src/containers/Backend/Admin/EventTypes/Actions/Edit.js":
-/*!******************************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/Admin/EventTypes/Actions/Edit.js ***!
-  \******************************************************************************/
+/***/ "./resources/js/src/containers/Backend/Admin/Companies/Actions/Edit.js":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/src/containers/Backend/Admin/Companies/Actions/Edit.js ***!
+  \*****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -276,7 +276,7 @@ var Edit = /*#__PURE__*/function (_Component) {
   }], [{
     key: "getDerivedStateFromProps",
     value: function getDerivedStateFromProps(nextProps, prevState) {
-      if (nextProps.eventType && prevState.name === '') return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_11__["updateObject"])(prevState, _objectSpread({}, nextProps.eventType));
+      if (nextProps.company && prevState.name === '') return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_11__["updateObject"])(prevState, _objectSpread({}, nextProps.company));
       return prevState;
     }
   }]);
@@ -291,7 +291,7 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     submit: function submit(id, data) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_10__["patchEventTypes"](id, data));
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_10__["patchCompanies"](id, data));
     }
   };
 };
@@ -300,10 +300,10 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
-/***/ "./resources/js/src/containers/Backend/Admin/EventTypes/Actions/View.js":
-/*!******************************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/Admin/EventTypes/Actions/View.js ***!
-  \******************************************************************************/
+/***/ "./resources/js/src/containers/Backend/Admin/Companies/Actions/View.js":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/src/containers/Backend/Admin/Companies/Actions/View.js ***!
+  \*****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -336,7 +336,7 @@ var I = function I(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref2) {
-  var eventType = _ref2.eventType;
+  var company = _ref2.company;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
     className: "m-0 p-3 rounded bg-green-20"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
@@ -347,19 +347,19 @@ var I = function I(_ref) {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faUser"],
     className: "mr-2",
     fixedWidth: true
-  }), "Event type details"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(I, {
+  }), "Company details"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(I, {
     label: "Name"
-  }, eventType.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(I, {
+  }, company.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(I, {
     label: "Creation Date"
-  }, Object(_shared_utility__WEBPACK_IMPORTED_MODULE_4__["convertDate"])(eventType.created_at))));
+  }, Object(_shared_utility__WEBPACK_IMPORTED_MODULE_4__["convertDate"])(company.created_at))));
 });
 
 /***/ }),
 
-/***/ "./resources/js/src/containers/Backend/Admin/EventTypes/index.js":
-/*!***********************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/Admin/EventTypes/index.js ***!
-  \***********************************************************************/
+/***/ "./resources/js/src/containers/Backend/Admin/Companies/index.js":
+/*!**********************************************************************!*\
+  !*** ./resources/js/src/containers/Backend/Admin/Companies/index.js ***!
+  \**********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -383,9 +383,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Backend_UI_Delete_Delete__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../../components/Backend/UI/Delete/Delete */ "./resources/js/src/components/Backend/UI/Delete/Delete.js");
 /* harmony import */ var _components_Backend_UI_View_View__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../../components/Backend/UI/View/View */ "./resources/js/src/components/Backend/UI/View/View.js");
 /* harmony import */ var _components_Backend_UI_Counter_Counter__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../../components/Backend/UI/Counter/Counter */ "./resources/js/src/components/Backend/UI/Counter/Counter.js");
-/* harmony import */ var _Actions_Edit__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./Actions/Edit */ "./resources/js/src/containers/Backend/Admin/EventTypes/Actions/Edit.js");
-/* harmony import */ var _Actions_Add__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./Actions/Add */ "./resources/js/src/containers/Backend/Admin/EventTypes/Actions/Add.js");
-/* harmony import */ var _Actions_View__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./Actions/View */ "./resources/js/src/containers/Backend/Admin/EventTypes/Actions/View.js");
+/* harmony import */ var _Actions_Edit__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./Actions/Edit */ "./resources/js/src/containers/Backend/Admin/Companies/Actions/Edit.js");
+/* harmony import */ var _Actions_Add__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./Actions/Add */ "./resources/js/src/containers/Backend/Admin/Companies/Actions/Add.js");
+/* harmony import */ var _Actions_View__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./Actions/View */ "./resources/js/src/containers/Backend/Admin/Companies/Actions/View.js");
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../../../store/actions */ "./resources/js/src/store/actions/index.js");
 /* harmony import */ var _shared_utility__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../../../shared/utility */ "./resources/js/src/shared/utility.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -466,11 +466,11 @@ var Index = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this = this;
 
-      var _this$props$backend$e = this.props.backend.eventTypes,
-          loading = _this$props$backend$e.loading,
-          error = _this$props$backend$e.error,
-          message = _this$props$backend$e.message,
-          eventTypes = _this$props$backend$e.eventTypes;
+      var _this$props$backend$c = this.props.backend.companies,
+          loading = _this$props$backend$c.loading,
+          error = _this$props$backend$c.error,
+          message = _this$props$backend$c.message,
+          companies = _this$props$backend$c.companies;
       var content;
       var errors;
       var feedback;
@@ -481,30 +481,30 @@ var Index = /*#__PURE__*/function (_Component) {
           err: error
         }));
 
-        if (eventTypes) {
+        if (companies) {
           feedback = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Feedback_Feedback__WEBPACK_IMPORTED_MODULE_13__["default"], {
             message: message
           });
-          var data = eventTypes.map(function (eventType) {
+          var data = companies.map(function (company) {
             var viewContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Actions_View__WEBPACK_IMPORTED_MODULE_19__["default"], {
-              eventType: eventType
+              company: company
             });
             var editContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Actions_Edit__WEBPACK_IMPORTED_MODULE_17__["default"], {
-              eventType: eventType
+              company: company
             });
-            return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_21__["updateObject"])(eventType, {
-              created_at: Object(_shared_utility__WEBPACK_IMPORTED_MODULE_21__["convertDate"])(eventType.created_at),
+            return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_21__["updateObject"])(company, {
+              created_at: Object(_shared_utility__WEBPACK_IMPORTED_MODULE_21__["convertDate"])(company.created_at),
               action: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
                 className: "text-center"
               }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_View_View__WEBPACK_IMPORTED_MODULE_15__["default"], {
-                title: 'Event Type details: ' + eventType.name,
+                title: 'Company details: ' + company.name,
                 content: viewContent
               }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faEye"],
                 className: "text-green mr-2",
                 fixedWidth: true
               })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_View_View__WEBPACK_IMPORTED_MODULE_15__["default"], {
-                title: 'Event Type edit: ' + eventType.name,
+                title: 'Company edit: ' + company.name,
                 content: editContent
               }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faEdit"],
@@ -512,7 +512,7 @@ var Index = /*#__PURE__*/function (_Component) {
                 fixedWidth: true
               })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_Delete_Delete__WEBPACK_IMPORTED_MODULE_14__["default"], {
                 deleteAction: function deleteAction() {
-                  return _this.props["delete"](eventType.id);
+                  return _this.props["delete"](company.id);
                 }
               }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTrash"],
@@ -523,12 +523,12 @@ var Index = /*#__PURE__*/function (_Component) {
           });
           content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_List_List__WEBPACK_IMPORTED_MODULE_9__["default"], {
             array: data,
-            data: JSON.stringify(eventTypes),
+            data: JSON.stringify(companies),
             bordered: true,
-            add: "Add Event Type",
+            add: "Add Company",
             content: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Actions_Add__WEBPACK_IMPORTED_MODULE_18__["default"], null),
             icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faBuilding"],
-            title: "Event Types",
+            title: "Companies",
             className: "bg-white shadow-sm",
             fields: [{
               name: 'Name',
@@ -547,14 +547,14 @@ var Index = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "bg-white py-4 pl-5 pr-4 position-relative"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_Breadcrumb_Breadcrumb__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        main: "Event Types",
+        main: "Companies",
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faBuilding"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_Titles_SpecialTitle_SpecialTitle__WEBPACK_IMPORTED_MODULE_7__["default"], {
         user: true,
         icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faBuilding"]
       }, "Admin panel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_Titles_Subtitle_Subtitle__WEBPACK_IMPORTED_MODULE_8__["default"], {
         user: true
-      }, "Event Types")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Companies")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "p-4 pb-0"
       }, errors, feedback, content));
     }
@@ -570,16 +570,16 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     get: function get() {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["getEventTypes"]());
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["getCompanies"]());
     },
     "delete": function _delete(id) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["deleteEventTypes"](id));
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["deleteCompanies"](id));
     },
     patch: function patch(id, data) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["patchEventTypes"](id, data));
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["patchCompanies"](id, data));
     },
     reset: function reset() {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["eventTypesReset"]());
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["companiesReset"]());
     }
   };
 };

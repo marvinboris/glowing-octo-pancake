@@ -103,8 +103,8 @@ export default class Home extends Component {
                     <Row>
                         <Col lg={7}>
                             <Row className="border-bottom border-4 border-green-20 pb-4">
-                                <Info icon={faPhone} title="Have a question?">Call us : 237.111.222.333</Info>
-                                <Info icon={faClock} title="Opening hours">Monday - Friday : 8am - 4pm</Info>
+                                <Info icon={faPhone} title="Have a question?">Call us : 237.671.62.62.62</Info>
+                                <Info icon={faClock} title="Opening hours">Monday - Friday : 8am - 6pm</Info>
                             </Row>
                         </Col>
                     </Row>
@@ -306,8 +306,8 @@ export default class Home extends Component {
                         </div>
 
                         <div className="text-blue text-large text-500 mb-5">
-                            <div className="mb-2"><FontAwesomeIcon icon={faPhone} fixedWidth className="mr-2" />237.111.222.333</div>
-                            <div><FontAwesomeIcon icon={faEnvelope} fixedWidth className="mr-2" />cleaner@your-email.com</div>
+                            <div className="mb-2"><FontAwesomeIcon icon={faPhone} fixedWidth className="mr-2" />237.671.62.62.62</div>
+                            <div><FontAwesomeIcon icon={faEnvelope} fixedWidth className="mr-2" />contact@hosamine.net</div>
                         </div>
 
                         <Form className="p-4 shadow-lg rounded bg-white row w-70">

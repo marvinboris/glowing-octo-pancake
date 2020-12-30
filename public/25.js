@@ -1,8 +1,8 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[25],{
 
-/***/ "./resources/js/src/containers/Backend/Admin/Priorities/Actions/Add.js":
+/***/ "./resources/js/src/containers/Backend/Admin/EventTypes/Actions/Add.js":
 /*!*****************************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/Admin/Priorities/Actions/Add.js ***!
+  !*** ./resources/js/src/containers/Backend/Admin/EventTypes/Actions/Add.js ***!
   \*****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -132,7 +132,7 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     onSubmit: function onSubmit(data) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_7__["postPriorities"](data));
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_7__["postEventTypes"](data));
     }
   };
 };
@@ -141,9 +141,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
-/***/ "./resources/js/src/containers/Backend/Admin/Priorities/Actions/Edit.js":
+/***/ "./resources/js/src/containers/Backend/Admin/EventTypes/Actions/Edit.js":
 /*!******************************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/Admin/Priorities/Actions/Edit.js ***!
+  !*** ./resources/js/src/containers/Backend/Admin/EventTypes/Actions/Edit.js ***!
   \******************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -276,7 +276,7 @@ var Edit = /*#__PURE__*/function (_Component) {
   }], [{
     key: "getDerivedStateFromProps",
     value: function getDerivedStateFromProps(nextProps, prevState) {
-      if (nextProps.priority && prevState.name === '') return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_11__["updateObject"])(prevState, _objectSpread({}, nextProps.priority));
+      if (nextProps.eventType && prevState.name === '') return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_11__["updateObject"])(prevState, _objectSpread({}, nextProps.eventType));
       return prevState;
     }
   }]);
@@ -291,7 +291,7 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     submit: function submit(id, data) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_10__["patchPriorities"](id, data));
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_10__["patchEventTypes"](id, data));
     }
   };
 };
@@ -300,9 +300,9 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 
 /***/ }),
 
-/***/ "./resources/js/src/containers/Backend/Admin/Priorities/Actions/View.js":
+/***/ "./resources/js/src/containers/Backend/Admin/EventTypes/Actions/View.js":
 /*!******************************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/Admin/Priorities/Actions/View.js ***!
+  !*** ./resources/js/src/containers/Backend/Admin/EventTypes/Actions/View.js ***!
   \******************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -336,7 +336,7 @@ var I = function I(_ref) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref2) {
-  var priority = _ref2.priority;
+  var eventType = _ref2.eventType;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], {
     className: "m-0 p-3 rounded bg-green-20"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
@@ -347,18 +347,18 @@ var I = function I(_ref) {
     icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_2__["faUser"],
     className: "mr-2",
     fixedWidth: true
-  }), "Priority details"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(I, {
+  }), "Event type details"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(I, {
     label: "Name"
-  }, priority.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(I, {
+  }, eventType.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(I, {
     label: "Creation Date"
-  }, Object(_shared_utility__WEBPACK_IMPORTED_MODULE_4__["convertDate"])(priority.created_at))));
+  }, Object(_shared_utility__WEBPACK_IMPORTED_MODULE_4__["convertDate"])(eventType.created_at))));
 });
 
 /***/ }),
 
-/***/ "./resources/js/src/containers/Backend/Admin/Priorities/index.js":
+/***/ "./resources/js/src/containers/Backend/Admin/EventTypes/index.js":
 /*!***********************************************************************!*\
-  !*** ./resources/js/src/containers/Backend/Admin/Priorities/index.js ***!
+  !*** ./resources/js/src/containers/Backend/Admin/EventTypes/index.js ***!
   \***********************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -383,9 +383,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Backend_UI_Delete_Delete__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../../components/Backend/UI/Delete/Delete */ "./resources/js/src/components/Backend/UI/Delete/Delete.js");
 /* harmony import */ var _components_Backend_UI_View_View__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../../../components/Backend/UI/View/View */ "./resources/js/src/components/Backend/UI/View/View.js");
 /* harmony import */ var _components_Backend_UI_Counter_Counter__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../../../components/Backend/UI/Counter/Counter */ "./resources/js/src/components/Backend/UI/Counter/Counter.js");
-/* harmony import */ var _Actions_Edit__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./Actions/Edit */ "./resources/js/src/containers/Backend/Admin/Priorities/Actions/Edit.js");
-/* harmony import */ var _Actions_Add__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./Actions/Add */ "./resources/js/src/containers/Backend/Admin/Priorities/Actions/Add.js");
-/* harmony import */ var _Actions_View__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./Actions/View */ "./resources/js/src/containers/Backend/Admin/Priorities/Actions/View.js");
+/* harmony import */ var _Actions_Edit__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./Actions/Edit */ "./resources/js/src/containers/Backend/Admin/EventTypes/Actions/Edit.js");
+/* harmony import */ var _Actions_Add__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./Actions/Add */ "./resources/js/src/containers/Backend/Admin/EventTypes/Actions/Add.js");
+/* harmony import */ var _Actions_View__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./Actions/View */ "./resources/js/src/containers/Backend/Admin/EventTypes/Actions/View.js");
 /* harmony import */ var _store_actions__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../../../../store/actions */ "./resources/js/src/store/actions/index.js");
 /* harmony import */ var _shared_utility__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../../../../shared/utility */ "./resources/js/src/shared/utility.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -466,11 +466,11 @@ var Index = /*#__PURE__*/function (_Component) {
     value: function render() {
       var _this = this;
 
-      var _this$props$backend$p = this.props.backend.priorities,
-          loading = _this$props$backend$p.loading,
-          error = _this$props$backend$p.error,
-          message = _this$props$backend$p.message,
-          priorities = _this$props$backend$p.priorities;
+      var _this$props$backend$e = this.props.backend.eventTypes,
+          loading = _this$props$backend$e.loading,
+          error = _this$props$backend$e.error,
+          message = _this$props$backend$e.message,
+          eventTypes = _this$props$backend$e.eventTypes;
       var content;
       var errors;
       var feedback;
@@ -481,30 +481,30 @@ var Index = /*#__PURE__*/function (_Component) {
           err: error
         }));
 
-        if (priorities) {
+        if (eventTypes) {
           feedback = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Feedback_Feedback__WEBPACK_IMPORTED_MODULE_13__["default"], {
             message: message
           });
-          var data = priorities.map(function (priority) {
+          var data = eventTypes.map(function (eventType) {
             var viewContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Actions_View__WEBPACK_IMPORTED_MODULE_19__["default"], {
-              priority: priority
+              eventType: eventType
             });
             var editContent = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Actions_Edit__WEBPACK_IMPORTED_MODULE_17__["default"], {
-              priority: priority
+              eventType: eventType
             });
-            return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_21__["updateObject"])(priority, {
-              created_at: Object(_shared_utility__WEBPACK_IMPORTED_MODULE_21__["convertDate"])(priority.created_at),
+            return Object(_shared_utility__WEBPACK_IMPORTED_MODULE_21__["updateObject"])(eventType, {
+              created_at: Object(_shared_utility__WEBPACK_IMPORTED_MODULE_21__["convertDate"])(eventType.created_at),
               action: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
                 className: "text-center"
               }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_View_View__WEBPACK_IMPORTED_MODULE_15__["default"], {
-                title: 'Priority details: ' + priority.name,
+                title: 'Event Type details: ' + eventType.name,
                 content: viewContent
               }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faEye"],
                 className: "text-green mr-2",
                 fixedWidth: true
               })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_View_View__WEBPACK_IMPORTED_MODULE_15__["default"], {
-                title: 'Priority edit: ' + priority.name,
+                title: 'Event Type edit: ' + eventType.name,
                 content: editContent
               }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faEdit"],
@@ -512,7 +512,7 @@ var Index = /*#__PURE__*/function (_Component) {
                 fixedWidth: true
               })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_Delete_Delete__WEBPACK_IMPORTED_MODULE_14__["default"], {
                 deleteAction: function deleteAction() {
-                  return _this.props["delete"](priority.id);
+                  return _this.props["delete"](eventType.id);
                 }
               }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_4__["FontAwesomeIcon"], {
                 icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faTrash"],
@@ -523,12 +523,12 @@ var Index = /*#__PURE__*/function (_Component) {
           });
           content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Row"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_List_List__WEBPACK_IMPORTED_MODULE_9__["default"], {
             array: data,
-            data: JSON.stringify(priorities),
+            data: JSON.stringify(eventTypes),
             bordered: true,
-            add: "Add Priority",
+            add: "Add Event Type",
             content: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Actions_Add__WEBPACK_IMPORTED_MODULE_18__["default"], null),
-            icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faLayerGroup"],
-            title: "Priorities",
+            icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faBuilding"],
+            title: "Event Types",
             className: "bg-white shadow-sm",
             fields: [{
               name: 'Name',
@@ -547,14 +547,14 @@ var Index = /*#__PURE__*/function (_Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "bg-white py-4 pl-5 pr-4 position-relative"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Backend_UI_Breadcrumb_Breadcrumb__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        main: "Priorities",
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faLayerGroup"]
+        main: "Event Types",
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faBuilding"]
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_Titles_SpecialTitle_SpecialTitle__WEBPACK_IMPORTED_MODULE_7__["default"], {
         user: true,
-        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faLayerGroup"]
+        icon: _fortawesome_free_solid_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faBuilding"]
       }, "Admin panel"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_UI_Titles_Subtitle_Subtitle__WEBPACK_IMPORTED_MODULE_8__["default"], {
         user: true
-      }, "Priorities")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Event Types")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "p-4 pb-0"
       }, errors, feedback, content));
     }
@@ -570,16 +570,16 @@ var mapStateToProps = function mapStateToProps(state) {
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     get: function get() {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["getPriorities"]());
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["getEventTypes"]());
     },
     "delete": function _delete(id) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["deletePriorities"](id));
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["deleteEventTypes"](id));
     },
     patch: function patch(id, data) {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["patchPriorities"](id, data));
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["patchEventTypes"](id, data));
     },
     reset: function reset() {
-      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["prioritiesReset"]());
+      return dispatch(_store_actions__WEBPACK_IMPORTED_MODULE_20__["eventTypesReset"]());
     }
   };
 };

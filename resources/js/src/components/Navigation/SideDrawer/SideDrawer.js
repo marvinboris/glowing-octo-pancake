@@ -14,7 +14,7 @@ export default ({ close, show = true }) => (
         {/* <Backdrop clicked={close} show={show} /> */}
         <div className="SideDrawer bg-green text-white d-flex flex-column" onClick={close}>
             <div className="py-5 text-center">
-                <Logo />
+                <Logo big dark />
             </div>
 
             <div className="flex-fill d-flex flex-column">
@@ -35,11 +35,11 @@ export default ({ close, show = true }) => (
                         </div>
 
                         <div className="pb-3">
-                            Call: 237.222.333.444
+                            Call: 237.671.62.62.62
                         </div>
 
                         <div>
-                            contact@cleanforever.com
+                            contact@hosamine.net
                         </div>
                     </div>
 

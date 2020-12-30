@@ -503,6 +503,48 @@ __webpack_require__.r(__webpack_exports__);
   }, message.content) : null;
 });
 
+/***/ }),
+
+/***/ "./resources/js/src/components/UI/Button/BetweenButton/BetweenButton.js":
+/*!******************************************************************************!*\
+  !*** ./resources/js/src/components/UI/Button/BetweenButton/BetweenButton.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
+  var children = _ref.children,
+      color = _ref.color,
+      icon = _ref.icon,
+      _ref$iconColor = _ref.iconColor,
+      iconColor = _ref$iconColor === void 0 ? 'reset' : _ref$iconColor,
+      _ref$className = _ref.className,
+      className = _ref$className === void 0 ? '' : _ref$className,
+      size = _ref.size,
+      _ref$pill = _ref.pill,
+      pill = _ref$pill === void 0 ? false : _ref$pill,
+      onClick = _ref.onClick;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Button"], {
+    onClick: onClick,
+    color: color,
+    size: size,
+    className: "d-inline-flex justify-content-center align-items-center " + (pill ? ' rounded-pill ' : '') + className
+  }, children, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
+    size: "lg",
+    icon: icon,
+    className: "ml-3 text-" + iconColor
+  }));
+});
+
 /***/ })
 
 }]);
